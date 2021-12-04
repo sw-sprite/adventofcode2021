@@ -9,7 +9,7 @@ with open("input.txt") as f:
 b_length = len(lines[0][:-1])
 
 # oxy find most, if eql use 1, co2 is opposite, most/least changes as array change
-# eg: if pos 5 most common could be 1 in first loop, then 0 second loop
+# eg: pos 5 most common could be 1 in first loop, then 0 second loop
 oxy_td_arr = lines
 co2_td_arr = lines
 
