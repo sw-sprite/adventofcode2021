@@ -1,4 +1,5 @@
 import re
+from collections import deque
 
 with open("input.txt") as f:
     lines = f.read()
@@ -13,16 +14,17 @@ lines = list(filter(None, lines))
 fish = [int(x) for x in lines]
 # print(lines)
 
-days = 1
-while days <= 80:
-    temp_fish = fish
-    for index in range(len(temp_fish)):
-        if temp_fish[index] > 0:
-            fish[index] -= 1
-        else:
-            fish[index] = 6
-            fish.append(8)
-    days += 1
-    # print("(", days,",",len(fish), ")")
+fish_count = deque([0]*9)
+for i in fish:
+    fish_count[i] += 1
 
-print("(", days, ",", len(fish), ")")
+print(fish_count)
+
+days = 1
+while days <= 256:
+    fish_count.rotate(-1) 
+    fish_count[6] += fish_count[8]
+    days += 1
+    # print(days)
+
+print(sum(fish_count))
