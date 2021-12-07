@@ -1,0 +1,1 @@
+# solution is messy but gives the right result, if im not switching language for aoc 2021, I'll probably go through a tutorial/get a python book 
