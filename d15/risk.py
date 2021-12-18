@@ -38,7 +38,8 @@ def dijkstras(multiple):
             new_x = x + DR[i]
             new_y = y + DC[i]
             heapq.heappush(pq, (distance_grid[x][y],new_x,new_y))
-    
+        print('\n'.join(map(''.join, distance_grid)))
+
     return distance_grid[multiple*row-1][multiple*col-1] - lines[0][0]
 
 print(dijkstras(1))

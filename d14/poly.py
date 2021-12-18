@@ -31,10 +31,12 @@ def forward_one(current_pairs):
 
 def count_freq(current_pairs):
     counts = defaultdict(lambda:0)
+    # seperate the pair into 2 letter counts
     for key,count in current_pairs.items():
         counts[key[0]]+=count
         counts[key[1]]+=count
 
+    # cut the count down to 1/2
     for key in counts.keys():
         counts[key]=np.ceil(counts[key]/2)
     return counts
