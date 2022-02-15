@@ -6,3 +6,6 @@ the input is **different** for everyone, so please replace the input file if you
 
  
  > https://adventofcode.com/
+
+ I got all 50 stars for 2021! YAY! 
+ ![alt text](/img/50stars.png)
